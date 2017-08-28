@@ -2,6 +2,8 @@
 
 springのスタンドアローンアプリです。   
 Mavenプロジェクトです。   
+## 事前準備
+[nos2jdbc](https://github.com/ns2j/nos2jdbc)をMavenのローカルリポジトリにインストールしてください。   
 
 ## 実行方法
 ### コンパイル
