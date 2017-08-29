@@ -21,7 +21,7 @@
     </fileset>
     <pathelement location="${classpathdir}"/>
     <pathelement path="${plugin_classpath}"/>
-    <pathelement path="${compile_classpath}"/>
+    <pathelement path="${runtime_classpath}"/>
   </path>
 
   <taskdef resource="s2jdbc-gen-task.properties" classpathref="classpath"/>
