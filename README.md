@@ -1,5 +1,5 @@
 # nos2jdbc-tutorial
-## nos2jdbcのチュートリアルです
+## nos2jdbc(No Seasar2 Container's S2JDBC)のチュートリアルです
 * spring(スタンドアローン)
 * wildfly(アップ予定)
 
