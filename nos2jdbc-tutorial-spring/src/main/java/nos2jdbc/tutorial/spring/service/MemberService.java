@@ -45,4 +45,8 @@ public class MemberService extends NoS2AbstractService<Member> {
 		.leftOuterJoin(clubMemberRelList().club())
 		.getResultList();
     }
+
+    public Member getByOrder(int mo) {
+	return select().orderBy(asc(id())).offset(mo).limit(1).getSingleResult();
+    }
 }

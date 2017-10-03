@@ -48,19 +48,8 @@ public class ClubService extends NoS2AbstractService<Club> {
 		.getResultList();
     }
     
-    public void onlyWait() {
-	Club c = new Club();
-	c.name = "abcdefgh";
-	insert(c);
-	try {
-	    Thread.sleep(5000);
-	} catch (InterruptedException ie) {
-	}
-//	throw new RuntimeException("test exception");
-    }
-    
-    public void doNothing() {
-	findAll();
+    public Club getByOrderer(int co) {
+	return select().orderBy(asc(id())).offset(co).limit(1).getSingleResult();
     }
 
 }

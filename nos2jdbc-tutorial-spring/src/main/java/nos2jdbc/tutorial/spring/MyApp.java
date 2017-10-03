@@ -51,10 +51,12 @@ public class MyApp {
 	return members;
     }
 
-    protected ClubMemberRel createRel(long cid, long mid) {
+    protected ClubMemberRel createRel(int co, int mo) {
+	Club c = clubService.getByOrderer(co - 1);
+	Member m = memberService.getByOrder(mo - 1);
 	ClubMemberRel rel = new ClubMemberRel();
-	rel.clubId = cid;
-	rel.memberId = mid;
+	rel.clubId = c.id;
+	rel.memberId = m.id;
 	return rel;
     }
     protected List<ClubMemberRel> getRelList() {
