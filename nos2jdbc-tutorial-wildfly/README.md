@@ -24,8 +24,8 @@ nos2jdbc-genをMavenから実行します。
 ### deploy
 `mvn wildfly:deploy`
 ### 実行
-ブラウザで、   
-`http://localhost:[port]/nos2jdbc-tutorial-wildfly/club/list/`   
+wildflyの設定に合わせてブラウザで、   
+`http://localhost:8080/nos2jdbc-tutorial-wildfly/club/list/`   
 とアクセスするとDBの内容のjsonが返されます。  
 ## Testもできます。
 src/test/resources/arquillian.xmlのwildflyのインストールフォルダを編集して、   
