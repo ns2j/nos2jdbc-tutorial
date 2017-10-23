@@ -5,7 +5,7 @@ Mavenプロジェクトです。
 ## 実行までの過程
 ### nos2jdbcのインストール
 [nos2jdbc](https://github.com/ns2j/nos2jdbc)をMavenのローカルリポジトリにインストールしてください。   
-### datasource作成
+### DataSource作成
 src/main/java/nos2jdbc/tutorial/wildfly/config/Resources.javaのDataSourceのjndi名と合わせて,   
 wildfly上にDataSourceを作って下さい。
 ### nos2jdbc-datasource.propertiesの編集
