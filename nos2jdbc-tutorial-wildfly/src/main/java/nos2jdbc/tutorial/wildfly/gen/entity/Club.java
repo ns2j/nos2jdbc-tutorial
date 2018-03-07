@@ -1,4 +1,4 @@
-package nos2jdbc.tutorial.wildfly.entity;
+package nos2jdbc.tutorial.wildfly.gen.entity;
 
 import java.util.List;
 

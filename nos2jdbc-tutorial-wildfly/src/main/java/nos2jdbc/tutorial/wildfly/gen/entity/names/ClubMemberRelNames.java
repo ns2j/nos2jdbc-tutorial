@@ -1,15 +1,16 @@
-package nos2jdbc.tutorial.wildfly.entity;
+package nos2jdbc.tutorial.wildfly.gen.entity.names;
 
 import javax.annotation.Generated;
-import nos2jdbc.tutorial.wildfly.entity.ClubNames._ClubNames;
-import nos2jdbc.tutorial.wildfly.entity.MemberNames._MemberNames;
+import nos2jdbc.tutorial.wildfly.gen.entity.ClubMemberRel;
+import nos2jdbc.tutorial.wildfly.gen.entity.names.ClubNames._ClubNames;
+import nos2jdbc.tutorial.wildfly.gen.entity.names.MemberNames._MemberNames;
 import org.seasar.extension.jdbc.name.PropertyName;
 
 /**
  * {@link ClubMemberRel}のプロパティ名の集合です。
  * 
  */
-@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2017/10/19 14:04:01")
+@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.NamesModelFactoryImpl"}, date = "2018/03/07 12:31:27")
 public class ClubMemberRelNames {
 
     /**
