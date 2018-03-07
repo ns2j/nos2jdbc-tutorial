@@ -12,7 +12,7 @@ import nos2jdbc.tutorial.spring.gen.entity.names.MemberNames._MemberNames;
  * 名前クラスの集約です。
  * 
  */
-@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.NamesAggregateModelFactoryImpl"}, date = "2018/03/06 17:54:43")
+@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.NamesAggregateModelFactoryImpl"}, date = "2018/03/07 14:37:07")
 public class Names {
 
     /**

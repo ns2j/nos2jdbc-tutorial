@@ -14,10 +14,10 @@ import org.springframework.transaction.annotation.Transactional;
  * {@link ClubMemberRel}のサービスクラスです。
  * 
  */
-@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.ServiceModelFactoryImpl"}, date = "2017/07/20 16:55:48")
+@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.ServiceModelFactoryImpl"}, date = "2018/03/07 14:16:14")
 @Service
 @Transactional
-public class ClubMemberRelService extends NoS2AbstractService<ClubMemberRel> {
+public class ClubMemberRelServiceBase extends NoS2AbstractServiceBase<ClubMemberRel> {
 
     /**
      * 識別子でエンティティを検索します。
