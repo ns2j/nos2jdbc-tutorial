@@ -129,9 +129,6 @@
         <include name="${sqlfilepattern}" />
       </sqlfileset>
     </gen-sqlfiletest>
-    <!-- セキュリティの設定によっては以下の refresh タスクに時間がかかる場合があります．
-      その場合は refresh タスクを削除してください．-->
-    <refresh projectName="nos2jdbc-tutorial-spring-prac2"/>
   </target>
 
   <target name="gen-ddl">
@@ -224,9 +221,6 @@
         <include name="${sqlfilepattern}" />
       </sqlfileset>
     </gen-sqlfiletest>
-    <!-- セキュリティの設定によっては以下の refresh タスクに時間がかかる場合があります．
-      その場合は refresh タスクを削除してください．-->
-    <refresh projectName="nos2jdbc-tutorial-spring"/>
   </target>
 
   <target name="migrate">
@@ -240,9 +234,6 @@
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath"
     />
-    <!-- セキュリティの設定によっては以下の refresh タスクに時間がかかる場合があります．
-      その場合は refresh タスクを削除してください．-->
-    <refresh projectName="nos2jdbc-tutorial-spring"/>
   </target>
 
   <target name="rollback">
@@ -256,9 +247,6 @@
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath"
     />
-    <!-- セキュリティの設定によっては以下の refresh タスクに時間がかかる場合があります．
-      その場合は refresh タスクを削除してください．-->
-    <refresh projectName="nos2jdbc-tutorial-spring"/>
   </target>
 
   <target name="dump">
@@ -271,9 +259,6 @@
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath"
     />
-    <!-- セキュリティの設定によっては以下の refresh タスクに時間がかかる場合があります．
-      その場合は refresh タスクを削除してください．-->
-    <refresh projectName="nos2jdbc-tutorial-spring"/>
   </target>
 
 </project>
