@@ -1,10 +1,10 @@
-package nos2jdbc.tutorial.spring.service;
+package nos2jdbc.tutorial.spring.gen.service;
 
 import java.util.List;
 import javax.annotation.Generated;
-import nos2jdbc.tutorial.spring.entity.ClubMemberRel;
+import nos2jdbc.tutorial.spring.gen.entity.ClubMemberRel;
 
-import static nos2jdbc.tutorial.spring.entity.ClubMemberRelNames.*;
+import static nos2jdbc.tutorial.spring.gen.entity.names.ClubMemberRelNames.*;
 import static org.seasar.extension.jdbc.operation.Operations.*;
 
 import org.springframework.stereotype.Service;
