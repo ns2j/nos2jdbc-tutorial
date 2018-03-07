@@ -1,4 +1,4 @@
-package nos2jdbc.tutorial.spring.service;
+package nos2jdbc.tutorial.spring.gen.service;
 
 import javax.annotation.Generated;
 import java.io.Serializable;
@@ -24,7 +24,7 @@ import org.seasar.framework.util.tiger.GenericUtil;
  * @param <ENTITY>
  *            エンティティの型 
  */
-@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.NoS2AbstServiceModelFactoryImpl"}, date = "2017/07/20 16:55:47")
+@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.NoS2AbstServiceModelFactoryImpl"}, date = "2018/03/06 17:39:48")
 public abstract class NoS2AbstractService<T> {
 
     /**

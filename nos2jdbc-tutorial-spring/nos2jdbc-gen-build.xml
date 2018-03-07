@@ -1,8 +1,11 @@
 <project name="nos2jdbc-tutorial-spring" default="gen-ddl" basedir=".">
   <property name="classpathdir" value="target/classes"/>
   <property name="rootpackagename" value="nos2jdbc.tutorial.spring"/>
-  <property name="entitypackagename" value="entity"/>
-  <property name="entityfilepattern" value="nos2jdbc/tutorial/spring/entity/**/*.java"/>
+  <property name="subpackagename" value="gen"/>
+  <property name="entitypackagename" value="gen.entity"/>
+  <property name="namespackagename" value="gen.entity.names"/>
+  <property name="servicepackagename" value="gen.service"/>
+  <property name="entityfilepattern" value="nos2jdbc/tutorial/spring/gen/entity/**/*.java"/>
   <property name="javafiledestdir" value="src/main/java"/>
   <property name="testjavafiledestdir" value="src/test/java"/>
   <property name="javafileencoding" value="UTF-8"/>
@@ -49,6 +52,7 @@
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
       entitypackagename="${entitypackagename}"
+      namespackagename="${namespackagename}"
       javafiledestdir="${javafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
@@ -58,6 +62,7 @@
     <gen-sqlfileconstants
       classpathDir="${classpathdir}"
       rootpackagename="${rootpackagename}"
+      subpackagename="${subpackagename}"
       javafiledestdir="${javafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
@@ -71,6 +76,8 @@
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
       entitypackagename="${entitypackagename}"
+      namespackagename="${namespackagename}"
+      servicepackagename="${servicepackagename}"
       javafiledestdir="${javafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
@@ -82,6 +89,7 @@
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
       entitypackagename="${entitypackagename}"
+      namespackagename="${namespackagename}"
       javafiledestdir="${testjavafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
@@ -93,6 +101,7 @@
     <gen-servicetest
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
+      servicepackagename="${servicepackagename}"
       javafiledestdir="${testjavafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
@@ -104,7 +113,7 @@
     <gen-sqlfiletest
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
-      subpackagename="${entitypackagename}"
+      entitypackagename="${entitypackagename}"
       javafiledestdir="${testjavafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
@@ -135,6 +144,7 @@
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
       entitypackagename="${entitypackagename}"
+      namespackagename="${namespackagename}"
       javafiledestdir="${javafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
@@ -144,6 +154,7 @@
     <gen-sqlfileconstants
       classpathDir="${classpathdir}"
       rootpackagename="${rootpackagename}"
+      subpackagename="${subpackagename}"
       javafiledestdir="${javafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
@@ -157,6 +168,8 @@
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
       entitypackagename="${entitypackagename}"
+      namespackagename="${namespackagename}"
+      servicepackagename="${servicepackagename}"
       javafiledestdir="${javafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
@@ -168,6 +181,7 @@
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
       entitypackagename="${entitypackagename}"
+      namespackagename="${namespackagename}"
       javafiledestdir="${testjavafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
@@ -180,6 +194,8 @@
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
       javafiledestdir="${testjavafiledestdir}"
+      entitypackagename="${entitypackagename}"
+      servicepackagename="${servicepackagename}"
       javafileencoding="${javafileencoding}"
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
@@ -190,7 +206,7 @@
     <gen-sqlfiletest
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
-      subpackagename="${entitypackagename}"
+      subpackagename="${subpackagename}"
       javafiledestdir="${testjavafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"

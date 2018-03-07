@@ -1,4 +1,4 @@
-package nos2jdbc.tutorial.spring.entity;
+package nos2jdbc.tutorial.spring.gen.entity;
 
 import java.util.List;
 
@@ -9,15 +9,15 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Club {
+public class Member {
     @Id
     @GeneratedValue
     public Long id;
     
-    @Column(nullable = false, unique = true)
+    @Column
     public String name;
     
-    @OneToMany(mappedBy = "club")
+    @OneToMany(mappedBy ="member")
     public List<ClubMemberRel> clubMemberRelList;
 
 }

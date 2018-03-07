@@ -1,15 +1,18 @@
-package nos2jdbc.tutorial.spring.entity;
+package nos2jdbc.tutorial.spring.gen.entity.names;
 
 import javax.annotation.Generated;
-import nos2jdbc.tutorial.spring.entity.ClubMemberRelNames._ClubMemberRelNames;
-import nos2jdbc.tutorial.spring.entity.ClubNames._ClubNames;
-import nos2jdbc.tutorial.spring.entity.MemberNames._MemberNames;
+import nos2jdbc.tutorial.spring.gen.entity.Club;
+import nos2jdbc.tutorial.spring.gen.entity.ClubMemberRel;
+import nos2jdbc.tutorial.spring.gen.entity.Member;
+import nos2jdbc.tutorial.spring.gen.entity.names.ClubMemberRelNames._ClubMemberRelNames;
+import nos2jdbc.tutorial.spring.gen.entity.names.ClubNames._ClubNames;
+import nos2jdbc.tutorial.spring.gen.entity.names.MemberNames._MemberNames;
 
 /**
  * 名前クラスの集約です。
  * 
  */
-@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.NamesAggregateModelFactoryImpl"}, date = "2017/08/25 15:32:20")
+@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.NamesAggregateModelFactoryImpl"}, date = "2018/03/06 17:54:43")
 public class Names {
 
     /**
