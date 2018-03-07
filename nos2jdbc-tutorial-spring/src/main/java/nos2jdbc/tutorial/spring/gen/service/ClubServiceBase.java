@@ -2,22 +2,22 @@ package nos2jdbc.tutorial.spring.gen.service;
 
 import java.util.List;
 import javax.annotation.Generated;
-import nos2jdbc.tutorial.spring.gen.entity.Member;
+import nos2jdbc.tutorial.spring.gen.entity.Club;
 
-import static nos2jdbc.tutorial.spring.gen.entity.names.MemberNames.*;
+import static nos2jdbc.tutorial.spring.gen.entity.names.ClubNames.*;
 import static org.seasar.extension.jdbc.operation.Operations.*;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * {@link Member}のサービスクラスです。
+ * {@link Club}のサービスクラスです。
  * 
  */
-@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.ServiceModelFactoryImpl"}, date = "2017/07/06 16:30:08")
+@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.ServiceModelFactoryImpl"}, date = "2018/03/07 14:16:14")
 @Service
 @Transactional
-public class MemberService extends NoS2AbstractService<Member> {
+public class ClubServiceBase extends NoS2AbstractServiceBase<Club> {
 
     /**
      * 識別子でエンティティを検索します。
@@ -26,7 +26,7 @@ public class MemberService extends NoS2AbstractService<Member> {
      *            識別子
      * @return エンティティ
      */
-    public Member findById(Long id) {
+    public Club findById(Long id) {
         return select().id(id).getSingleResult();
     }
 
@@ -35,18 +35,7 @@ public class MemberService extends NoS2AbstractService<Member> {
      * 
      * @return エンティティのリスト
      */
-    public List<Member> findAllOrderById() {
+    public List<Club> findAllOrderById() {
         return select().orderBy(asc(id())).getResultList();
-    }
-
-    public List<Member> findAllWithClubs() {
-	return select()
-		.leftOuterJoin(clubMemberRelList())
-		.leftOuterJoin(clubMemberRelList().club())
-		.getResultList();
-    }
-
-    public Member getByOrder(int mo) {
-	return select().orderBy(asc(id())).offset(mo).limit(1).getSingleResult();
     }
 }

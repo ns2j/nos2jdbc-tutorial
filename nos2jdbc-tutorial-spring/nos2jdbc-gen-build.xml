@@ -5,6 +5,7 @@
   <property name="entitypackagename" value="gen.entity"/>
   <property name="namespackagename" value="gen.entity.names"/>
   <property name="servicepackagename" value="gen.service"/>
+  <property name="serviceclassnamesuffix" value="ServiceBase"/>
   <property name="entityfilepattern" value="nos2jdbc/tutorial/spring/gen/entity/**/*.java"/>
   <property name="javafiledestdir" value="src/main/java"/>
   <property name="testjavafiledestdir" value="src/test/java"/>
@@ -78,6 +79,7 @@
       entitypackagename="${entitypackagename}"
       namespackagename="${namespackagename}"
       servicepackagename="${servicepackagename}"
+      serviceclassnamesuffix="${serviceclassnamesuffix}"
       javafiledestdir="${javafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
@@ -102,6 +104,7 @@
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
       servicepackagename="${servicepackagename}"
+      serviceclassnamesuffix="${serviceclassnamesuffix}"
       javafiledestdir="${testjavafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
@@ -170,6 +173,7 @@
       entitypackagename="${entitypackagename}"
       namespackagename="${namespackagename}"
       servicepackagename="${servicepackagename}"
+      serviceclassnamesuffix="${serviceclassnamesuffix}"
       javafiledestdir="${javafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
@@ -196,6 +200,7 @@
       javafiledestdir="${testjavafiledestdir}"
       entitypackagename="${entitypackagename}"
       servicepackagename="${servicepackagename}"
+      serviceclassnamesuffix="${serviceclassnamesuffix}"
       javafileencoding="${javafileencoding}"
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"

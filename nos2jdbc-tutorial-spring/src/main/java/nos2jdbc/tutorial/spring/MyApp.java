@@ -12,9 +12,9 @@ import org.springframework.transaction.annotation.Transactional;
 import nos2jdbc.tutorial.spring.gen.entity.Club;
 import nos2jdbc.tutorial.spring.gen.entity.ClubMemberRel;
 import nos2jdbc.tutorial.spring.gen.entity.Member;
-import nos2jdbc.tutorial.spring.gen.service.ClubMemberRelService;
-import nos2jdbc.tutorial.spring.gen.service.ClubService;
-import nos2jdbc.tutorial.spring.gen.service.MemberService;
+import nos2jdbc.tutorial.spring.service.ClubMemberRelService;
+import nos2jdbc.tutorial.spring.service.ClubService;
+import nos2jdbc.tutorial.spring.service.MemberService;
 
 public class MyApp {
     @Autowired

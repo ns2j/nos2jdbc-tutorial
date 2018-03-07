@@ -24,8 +24,8 @@ import org.seasar.framework.util.tiger.GenericUtil;
  * @param <ENTITY>
  *            エンティティの型 
  */
-@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.NoS2AbstServiceModelFactoryImpl"}, date = "2018/03/06 17:39:48")
-public abstract class NoS2AbstractService<T> {
+@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.NoS2AbstServiceModelFactoryImpl"}, date = "2018/03/07 14:16:14")
+public abstract class NoS2AbstractServiceBase<T> {
 
     /**
      * JDBCマネージャです。
@@ -48,11 +48,11 @@ public abstract class NoS2AbstractService<T> {
      * 
      */
     @SuppressWarnings("unchecked")
-    public NoS2AbstractService() {
+    public NoS2AbstractServiceBase() {
         Map<TypeVariable<?>, Type> map = GenericUtil
                 .getTypeVariableMap(getClass());
         for (Class<?> c = getClass(); c != Object.class; c = c.getSuperclass()) {
-            if (c.getSuperclass() == NoS2AbstractService.class) {
+            if (c.getSuperclass() == NoS2AbstractServiceBase.class) {
                 Type type = c.getGenericSuperclass();
                 Type[] arrays = GenericUtil.getGenericParameter(type);
                 setEntityClass((Class<T>) GenericUtil.getActualClass(arrays[0],
@@ -68,7 +68,7 @@ public abstract class NoS2AbstractService<T> {
      * @param entityClass
      *            エンティティのクラス
      */
-    public NoS2AbstractService(Class<T> entityClass) {
+    public NoS2AbstractServiceBase(Class<T> entityClass) {
         setEntityClass(entityClass);
     }
 
