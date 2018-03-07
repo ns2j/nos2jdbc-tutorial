@@ -1,4 +1,4 @@
-package nos2jdbc.tutorial.wildfly.service;
+package nos2jdbc.tutorial.wildfly.gen.service;
 
 import javax.annotation.Generated;
 import java.io.Serializable;

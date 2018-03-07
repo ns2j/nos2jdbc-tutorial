@@ -1,13 +1,13 @@
-package nos2jdbc.tutorial.wildfly.service;
+package nos2jdbc.tutorial.wildfly.gen.service;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Generated;
-import nos2jdbc.tutorial.wildfly.entity.Club;
-import nos2jdbc.tutorial.wildfly.entity.ClubMemberRel;
-import nos2jdbc.tutorial.wildfly.entity.Member;
+import nos2jdbc.tutorial.wildfly.gen.entity.Club;
+import nos2jdbc.tutorial.wildfly.gen.entity.ClubMemberRel;
+import nos2jdbc.tutorial.wildfly.gen.entity.Member;
 
-import static nos2jdbc.tutorial.wildfly.entity.ClubNames.*;
+import static nos2jdbc.tutorial.wildfly.gen.entity.names.ClubNames.*;
 import static org.seasar.extension.jdbc.operation.Operations.*;
 
 import javax.enterprise.context.Dependent;

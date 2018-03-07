@@ -1,15 +1,18 @@
-package nos2jdbc.tutorial.wildfly.entity;
+package nos2jdbc.tutorial.wildfly.gen.entity.names;
 
 import javax.annotation.Generated;
-import nos2jdbc.tutorial.wildfly.entity.ClubMemberRelNames._ClubMemberRelNames;
-import nos2jdbc.tutorial.wildfly.entity.ClubNames._ClubNames;
-import nos2jdbc.tutorial.wildfly.entity.MemberNames._MemberNames;
+import nos2jdbc.tutorial.wildfly.gen.entity.Club;
+import nos2jdbc.tutorial.wildfly.gen.entity.ClubMemberRel;
+import nos2jdbc.tutorial.wildfly.gen.entity.Member;
+import nos2jdbc.tutorial.wildfly.gen.entity.names.ClubMemberRelNames._ClubMemberRelNames;
+import nos2jdbc.tutorial.wildfly.gen.entity.names.ClubNames._ClubNames;
+import nos2jdbc.tutorial.wildfly.gen.entity.names.MemberNames._MemberNames;
 
 /**
  * 名前クラスの集約です。
  * 
  */
-@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.NamesAggregateModelFactoryImpl"}, date = "2017/10/19 14:04:01")
+@Generated(value = {"NOS2JDBC-Gen unknown", "org.seasar.extension.jdbc.gen.internal.model.NamesAggregateModelFactoryImpl"}, date = "2018/03/07 12:31:27")
 public class Names {
 
     /**

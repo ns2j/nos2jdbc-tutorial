@@ -1,11 +1,11 @@
-package nos2jdbc.tutorial.wildfly.service;
+package nos2jdbc.tutorial.wildfly.gen.service;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Generated;
-import nos2jdbc.tutorial.wildfly.entity.Member;
+import nos2jdbc.tutorial.wildfly.gen.entity.Member;
 
-import static nos2jdbc.tutorial.wildfly.entity.MemberNames.*;
+import static nos2jdbc.tutorial.wildfly.gen.entity.names.MemberNames.*;
 import static org.seasar.extension.jdbc.operation.Operations.*;
 
 import javax.enterprise.context.Dependent;
