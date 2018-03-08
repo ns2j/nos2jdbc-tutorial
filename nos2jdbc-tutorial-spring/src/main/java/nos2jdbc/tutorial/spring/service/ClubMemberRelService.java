@@ -4,7 +4,7 @@ import java.util.List;
 import nos2jdbc.tutorial.spring.gen.entity.ClubMemberRel;
 import nos2jdbc.tutorial.spring.gen.service.ClubMemberRelServiceBase;
 
-import static nos2jdbc.tutorial.spring.gen.entity.names.ClubMemberRelNames.*;
+import static nos2jdbc.tutorial.spring.gen.names.ClubMemberRelNames.*;
 import static org.seasar.extension.jdbc.operation.Operations.*;
 
 import org.springframework.stereotype.Service;

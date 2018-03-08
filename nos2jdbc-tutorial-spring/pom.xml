@@ -9,6 +9,8 @@
     <!-- maven-compiler-plugin -->
     <maven.compiler.target>1.7</maven.compiler.target>
     <maven.compiler.source>1.7</maven.compiler.source>
+
+    <entityPathPart>gen/entity</entityPathPart>
   </properties>
 
   <dependencies>
@@ -114,5 +116,24 @@
       </plugin>
     </plugins>
   </build>
-
+  
+  <profiles>
+    <profile>
+      <id>compile-least</id>
+      <build>
+	<plugins>
+	  <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+	      <includes>
+		<!-- path start from src/main/java -->
+		<include>**/${entityPathPart}/**/*.java</include>
+	      </includes>
+            </configuration>
+	  </plugin>
+	</plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>

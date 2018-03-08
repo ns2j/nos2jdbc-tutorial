@@ -4,7 +4,7 @@ import java.util.List;
 import nos2jdbc.tutorial.spring.gen.entity.Club;
 import nos2jdbc.tutorial.spring.gen.service.ClubServiceBase;
 
-import static nos2jdbc.tutorial.spring.gen.entity.names.ClubNames.*;
+import static nos2jdbc.tutorial.spring.gen.names.ClubNames.*;
 import static org.seasar.extension.jdbc.operation.Operations.*;
 
 import org.springframework.stereotype.Service;
