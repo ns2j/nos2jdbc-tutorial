@@ -5,7 +5,7 @@
 
   <groupId>nos2jdbc.tutorial</groupId>
   <artifactId>nos2jdbc-tutorial-wildfly</artifactId>
-  <version>1.2.0</version>
+  <version>1.2.1</version>
   <packaging>war</packaging>
   <name>nos2jdbc-tutorial-wildfly</name>
   <description>nos2jdbc tutorial for wildfly</description>
@@ -115,7 +115,7 @@
     <dependency>
       <groupId>nos2jdbc</groupId>
       <artifactId>nos2jdbc-core</artifactId>
-      <version>1.1.0</version>
+      <version>1.1.2</version>
     </dependency>
   </dependencies>
 
@@ -166,7 +166,7 @@
           <dependency>
             <groupId>nos2jdbc</groupId>
             <artifactId>nos2jdbc-gen</artifactId>
-            <version>1.1.1</version>
+            <version>1.1.2</version>
           </dependency>
           <dependency>
             <groupId>${jdbc.groupId}</groupId>
