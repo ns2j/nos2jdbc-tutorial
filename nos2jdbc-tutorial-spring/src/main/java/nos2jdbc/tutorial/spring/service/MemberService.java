@@ -4,7 +4,7 @@ import java.util.List;
 import nos2jdbc.tutorial.spring.gen.entity.Member;
 import nos2jdbc.tutorial.spring.gen.service.MemberServiceBase;
 
-import static nos2jdbc.tutorial.spring.gen.entity.names.MemberNames.*;
+import static nos2jdbc.tutorial.spring.gen.names.MemberNames.*;
 import static org.seasar.extension.jdbc.operation.Operations.*;
 
 import org.springframework.stereotype.Service;

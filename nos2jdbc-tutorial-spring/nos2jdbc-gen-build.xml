@@ -3,7 +3,7 @@
   <property name="rootpackagename" value="nos2jdbc.tutorial.spring"/>
   <property name="subpackagename" value="gen"/>
   <property name="entitypackagename" value="gen.entity"/>
-  <property name="namespackagename" value="gen.entity.names"/>
+  <property name="namespackagename" value="gen.names"/>
   <property name="servicepackagename" value="gen.service"/>
   <property name="serviceclassnamesuffix" value="ServiceBase"/>
   <property name="entityfilepattern" value="nos2jdbc/tutorial/spring/gen/entity/**/*.java"/>
