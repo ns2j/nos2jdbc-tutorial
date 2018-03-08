@@ -15,8 +15,8 @@ forgen/resources/nos2jdbc-datasource.propertiesを編集してください。
 ### pom.xmlの編集
 propertiesのwf.とjdbc.で始まるpropertyを編集してください。
 ### コンパイル
-`mvn compile -Pcompile-least`
-これは、リソースのコピーとEntityだけのコンパイルです。
+`mvn compile -Pcompile-least`   
+これは、genに必要なリソースのコピーとEntityだけのコンパイルです。
 ### DDL作成
 nos2jdbc-genをMavenから実行します。   
 `mvn antrun:run -Dant.target=gen-ddl`   
