@@ -14,8 +14,8 @@ import javax.ws.rs.core.Response.ResponseBuilder;
 import java.util.List;
 
 import nos2jdbc.tutorial.wildfly.gen.entity.Club;
-import nos2jdbc.tutorial.wildfly.gen.service.ClubMemberRelService;
-import nos2jdbc.tutorial.wildfly.gen.service.ClubService;
+import nos2jdbc.tutorial.wildfly.service.ClubMemberRelService;
+import nos2jdbc.tutorial.wildfly.service.ClubService;
 
 @Path("/club")
 @RequestScoped
