@@ -14,6 +14,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.target>1.7</maven.compiler.target>
     <maven.compiler.source>1.7</maven.compiler.source>
+
+    <entityPathPart>gen/entity</entityPathPart>
     
     <wf.hostname>localhost</wf.hostname>
     <wf.username>username</wf.username>
@@ -164,7 +166,7 @@
           <dependency>
             <groupId>nos2jdbc</groupId>
             <artifactId>nos2jdbc-gen</artifactId>
-            <version>1.1.0</version>
+            <version>1.1.1</version>
           </dependency>
           <dependency>
             <groupId>${jdbc.groupId}</groupId>
@@ -228,6 +230,23 @@
           <scope>test</scope>
         </dependency>
       </dependencies>
+    </profile>
+    <profile>
+      <id>compile-least</id>
+      <build>
+	<plugins>
+	  <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+	      <includes>
+		<!-- path start from src/main/java -->
+		<include>**/${entityPathPart}/**/*.java</include>
+	      </includes>
+            </configuration>
+	  </plugin>
+	</plugins>
+      </build>
     </profile>
   </profiles>
 </project>
