@@ -23,6 +23,7 @@ import org.seasar.extension.jdbc.DbmsDialect;
 import org.seasar.extension.jdbc.JdbcManager;
 import org.seasar.extension.jdbc.dialect.PostgreDialect;
 import org.seasar.extension.jdbc.manager.JdbcManagerImpl;
+import org.seasar.extension.jdbc.manager.JdbcManagerImplementor;
 
 import nos2jdbc.ManagerSetter;
 import nos2jdbc.TransactionManagerRegistry;
@@ -37,7 +38,7 @@ public class Resources {
 
     private DbmsDialect dialect = new PostgreDialect();
 
-    static private JdbcManager jdbcManager;
+    static private JdbcManagerImpl jdbcManagerImpl;
 
   //GenerationType.TABLEを使わないときはいりません。
     @Resource(lookup="java:jboss/TransactionManager")
@@ -45,10 +46,23 @@ public class Resources {
 
     @Produces @ApplicationScoped
     public JdbcManager produceJdbcManager() throws SQLException {
-	JdbcManagerImpl jdbcManagerImpl = new JdbcManagerImpl();
+        if (jdbcManagerImpl != null)
+            return jdbcManagerImpl;
+        jdbcManagerImpl = new JdbcManagerImpl();
 	ManagerSetter.setToJdbcManagerImpl(jdbcManagerImpl, dataSource, dialect, syncRegistry);
-	jdbcManager = jdbcManagerImpl;
 	TransactionManagerRegistry.register(transactionManager);//GenerationType.TABLEを使わないときはいりません。
-	return jdbcManager;
+	return jdbcManagerImpl;
     }
+
+    @Produces @ApplicationScoped
+    public JdbcManagerImplementor produceJdbcManagerImplementor() throws SQLException {
+        if (jdbcManagerImpl != null)
+            return jdbcManagerImpl;
+        jdbcManagerImpl = new JdbcManagerImpl();
+	ManagerSetter.setToJdbcManagerImpl(jdbcManagerImpl, dataSource, dialect, syncRegistry);
+	TransactionManagerRegistry.register(transactionManager);//GenerationType.TABLEを使わないときはいりません。
+	return jdbcManagerImpl;
+    }
+
+
 }
