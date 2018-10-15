@@ -1,0 +1,20 @@
+<Configuration>
+  <Appenders>
+    <Console name="STDOUT" target="SYSTEM_OUT">
+    <!--
+      <PatternLayout
+        pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n" />
+         -->
+      <PatternLayout
+        pattern="%d %-5p - %m%n" />
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="org.apache.log4j.xml" level="info" />
+    <Logger name="org.springframework.transaction" level="debug"/>
+    <Logger name="org.seasar.extension.jdbc" level="debug" />
+    <Root level="info">
+      <AppenderRef ref="STDOUT" />
+    </Root>
+  </Loggers>
+</Configuration>
