@@ -7,8 +7,8 @@
 
   <properties>
     <!-- maven-compiler-plugin -->
-    <maven.compiler.target>1.7</maven.compiler.target>
-    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
 
     <entityPathPart>gen/entity</entityPathPart>
   </properties>
@@ -45,7 +45,7 @@
     <dependency>
       <groupId>nos2jdbc</groupId>
       <artifactId>nos2jdbc-core</artifactId>
-      <version>1.1.3</version>
+      <version>1.2.0</version>
     </dependency>
 
     <dependency>
@@ -62,16 +62,25 @@
     </dependency>
 
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.3.1</version>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
 
   <build>
-    <plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
 
+    <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
@@ -95,7 +104,7 @@
           <dependency>
             <groupId>nos2jdbc</groupId>
             <artifactId>nos2jdbc-gen</artifactId>
-            <version>1.1.3</version>
+            <version>1.2.0-SNAPSHOT</version>
           </dependency>
         </dependencies>
 
