@@ -104,7 +104,7 @@
           <dependency>
             <groupId>nos2jdbc</groupId>
             <artifactId>nos2jdbc-gen</artifactId>
-            <version>1.2.1</version>
+            <version>1.2.2</version>
           </dependency>
         </dependencies>
 
