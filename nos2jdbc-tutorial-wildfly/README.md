@@ -3,8 +3,6 @@
 wildflyのjax-rsアプリです。   
 Mavenプロジェクトです。   
 ## 実行までの過程
-### nos2jdbcのインストール
-[nos2jdbc](https://github.com/ns2j/nos2jdbc)をMavenのローカルリポジトリにインストールしてください。   
 ### DataSource作成
 src/main/java/nos2jdbc/tutorial/wildfly/config/Resources.javaのDataSourceのjndi名と合わせて,   
 wildfly上にDataSourceを作って下さい。
