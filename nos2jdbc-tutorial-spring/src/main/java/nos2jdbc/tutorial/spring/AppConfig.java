@@ -14,13 +14,7 @@ import nos2jdbc.standalone.NoS2JdbcManager;
 
 @EnableTransactionManagement
 @Configuration
-//@ComponentScan(basePackages = "nos2jdbc.tutorial.spring", scopeResolver = Jsr330ScopeMetadataResolver.class)
-@ComponentScan(basePackages = "nos2jdbc.tutorial.spring")
 public class AppConfig {
-    @Bean
-    public MyApp myApp() {
-        return new MyApp();
-    }
     @Bean
     public JdbcManager getJdbcManager() {
 	return NoS2JdbcManager.getJdbcManager();
