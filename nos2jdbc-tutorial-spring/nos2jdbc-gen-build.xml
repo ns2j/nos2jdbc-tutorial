@@ -16,7 +16,6 @@
   <property name="env" value="ut"/>
   <property name="jdbcmanagername" value="jdbcManager"/>
   <property name="componenttype" value="spring"/>
-  <property name="springappconfig" value="nos2jdbc.tutorial.spring.AppConfig"/>
 
   <path id="classpath">
     <pathelement location="forgen/resources"/>
@@ -98,7 +97,6 @@
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath"
       componenttype="${componenttype}"
-      springappconfig="${springappconfig}"
     />
     <gen-servicetest
       classpathdir="${classpathdir}"
@@ -111,7 +109,6 @@
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath"
       componenttype="${componenttype}"
-      springappconfig="${springappconfig}"
     />
     <gen-sqlfiletest
       classpathdir="${classpathdir}"
@@ -123,7 +120,6 @@
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath"
       componenttype="${componenttype}"
-      springappconfig="${springappconfig}"
       >
       <sqlfileset dir="${classpathdir}">
         <include name="${sqlfilepattern}" />
@@ -189,7 +185,6 @@
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath"
       componenttype="${componenttype}"
-      springappconfig="${springappconfig}"
     />
     <gen-servicetest
       classpathdir="${classpathdir}"
@@ -203,7 +198,6 @@
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath"
         componenttype="${componenttype}"
-        springappconfig="${springappconfig}"
     />
     <gen-sqlfiletest
       classpathdir="${classpathdir}"
@@ -215,7 +209,6 @@
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath"
       componenttype="${componenttype}"
-      springappconfig="${springappconfig}"
     >
       <sqlfileset dir="${classpathdir}">
         <include name="${sqlfilepattern}" />

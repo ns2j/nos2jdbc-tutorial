@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,6 +16,7 @@ import nos2jdbc.tutorial.spring.service.ClubMemberRelService;
 import nos2jdbc.tutorial.spring.service.ClubService;
 import nos2jdbc.tutorial.spring.service.MemberService;
 
+@Component
 public class MyApp {
     @Autowired
     protected ClubService clubService;
