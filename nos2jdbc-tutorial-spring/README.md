@@ -1,6 +1,6 @@
-# nos2jdbcのspring用チュートリアルです
+# nos2jdbcのspring boot用チュートリアルです
 
-springのスタンドアローンアプリです。   
+spring bootのスタンドアローンアプリです。   
 Mavenプロジェクトです。   
 
 ## 実行方法
