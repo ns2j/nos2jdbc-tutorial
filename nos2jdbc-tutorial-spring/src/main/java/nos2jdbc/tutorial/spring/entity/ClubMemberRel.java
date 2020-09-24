@@ -1,4 +1,4 @@
-package nos2jdbc.tutorial.spring.gen.entity;
+package nos2jdbc.tutorial.spring.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

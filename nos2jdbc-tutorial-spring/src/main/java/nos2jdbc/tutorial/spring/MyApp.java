@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import nos2jdbc.tutorial.spring.gen.entity.Club;
-import nos2jdbc.tutorial.spring.gen.entity.ClubMemberRel;
-import nos2jdbc.tutorial.spring.gen.entity.Member;
+import nos2jdbc.tutorial.spring.entity.Club;
+import nos2jdbc.tutorial.spring.entity.ClubMemberRel;
+import nos2jdbc.tutorial.spring.entity.Member;
 import nos2jdbc.tutorial.spring.service.ClubMemberRelService;
 import nos2jdbc.tutorial.spring.service.ClubService;
 import nos2jdbc.tutorial.spring.service.MemberService;
