@@ -1,30 +1,45 @@
 <project name="nos2jdbc-tutorial-spring" default="gen-ddl" basedir=".">
   <property name="classpathdir" value="target/classes"/>
   <property name="rootpackagename" value="nos2jdbc.tutorial.spring"/>
+  <property name="entitypackagename" value="entity"/>
   <property name="subpackagename" value="gen"/>
-  <property name="entitypackagename" value="gen.entity"/>
   <property name="namespackagename" value="gen.names"/>
   <property name="servicepackagename" value="gen.service"/>
   <property name="serviceclassnamesuffix" value="ServiceBase"/>
-  <property name="entityfilepattern" value="nos2jdbc/tutorial/spring/gen/entity/**/*.java"/>
+  <property name="entityfilepattern" value="nos2jdbc/tutorial/spring/entity/**/*.java"/>
   <property name="javafiledestdir" value="src/main/java"/>
   <property name="testjavafiledestdir" value="src/test/java"/>
   <property name="javafileencoding" value="UTF-8"/>
   <property name="version" value="latest"/>
   <property name="sqlfilepattern" value="sql/**/*.sql"/>
   <property name="applyenvtoversion" value="false"/>
+  <property name="dump" value="false"/>
   <property name="env" value="ut"/>
   <property name="jdbcmanagername" value="jdbcManager"/>
-  <property name="componenttype" value="spring"/>
 
+  <property name="componenttype" value="spring"/>
+  <condition property="additional_classpath" value="${runtime_classpath}">
+    <isfalse value="${testdb}"/>
+    <!--
+      <not>
+        <equals arg1="${testdb}" arg2="true"/>
+      </not>
+  -->
+  </condition>
+  <condition property="additional_classpath" value="${test_classpath}">
+    <istrue value="${testdb}"/>
+    <!--
+        <equals arg1="${testdb}" arg2="true"/>
+  -->
+  </condition>
   <path id="classpath">
     <pathelement location="forgen/resources"/>
     <fileset dir="forgen/lib">
       <exclude name="forgen/lib/sources/**"/>
     </fileset>
-    <pathelement location="${classpathdir}"/>
     <pathelement path="${plugin_classpath}"/>
-    <pathelement path="${runtime_classpath}"/>
+    <pathelement path="${additional_classpath}"/>
+    <pathelement location="${classpathdir}"/>
   </path>
 
   <taskdef resource="s2jdbc-gen-task.properties" classpathref="classpath"/>
@@ -126,13 +141,13 @@
       </sqlfileset>
     </gen-sqlfiletest>
   </target>
-
   <target name="gen-ddl">
     <gen-ddl
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
       entitypackagename="${entitypackagename}"
       env="${env}"
+      dump="${dump}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath"
     />
@@ -226,6 +241,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath"
+      testdb="${testdb}"
     />
   </target>
 

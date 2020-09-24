@@ -1,7 +1,8 @@
 package nos2jdbc.tutorial.spring.service;
 
 import java.util.List;
-import nos2jdbc.tutorial.spring.gen.entity.Club;
+
+import nos2jdbc.tutorial.spring.entity.Club;
 import nos2jdbc.tutorial.spring.gen.service.ClubServiceBase;
 
 import static nos2jdbc.tutorial.spring.gen.names.ClubNames.*;

@@ -1,7 +1,8 @@
 package nos2jdbc.tutorial.spring.service;
 
 import java.util.List;
-import nos2jdbc.tutorial.spring.gen.entity.Member;
+
+import nos2jdbc.tutorial.spring.entity.Member;
 import nos2jdbc.tutorial.spring.gen.service.MemberServiceBase;
 
 import static nos2jdbc.tutorial.spring.gen.names.MemberNames.*;
