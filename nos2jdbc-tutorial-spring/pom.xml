@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>nos2jdbc.tutorial</groupId>
   <artifactId>nos2jdbc-tutorial-spring</artifactId>
-  <version>1.8.1</version>
+  <version>1.8.2</version>
 
   <properties>
     <!-- maven-compiler-plugin -->
@@ -72,6 +72,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
+        <version>3.0.0</version>
         <configuration>
           <mainClass>nos2jdbc.tutorial.spring.Main</mainClass>
           <cleanupDaemonThreads>false</cleanupDaemonThreads>
@@ -88,11 +89,15 @@
         </dependencies>
         <configuration>
           <target>
-            <property name="plugin_classpath" refid="maven.plugin.classpath" />
-            <property name="runtime_classpath" refid="maven.runtime.classpath" />
-            <property name="test_classpath" refid="maven.test.classpath" />
+            <property name="plugin_classpath"
+              refid="maven.plugin.classpath" />
+            <property name="runtime_classpath"
+              refid="maven.runtime.classpath" />
+            <property name="test_classpath"
+              refid="maven.test.classpath" />
             <echo message="plugin classpath:  ${plugin_classpath}" />
-            <echo message="runtime classpath:  ${runtime_classpath}" />
+            <echo
+              message="runtime classpath:  ${runtime_classpath}" />
             <echo message="test classpath:  ${test_classpath}" />
             <ant antfile="${basedir}/nos2jdbc-gen-build.xml"
               target="${ant.target}" inheritRefs="true" />
@@ -103,6 +108,12 @@
         </goals>
       </plugin>
 
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <argLine>--add-opens=java.base/java.lang=ALL-UNNAMED</argLine>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
@@ -124,18 +135,5 @@
         </plugins>
       </build>
     </profile>
-    <profile>
-      <id>jigsaw</id>
-      <activation>
-        <jdk>[1.9,)</jdk>
-      </activation>
-      <dependencies>
-        <dependency>
-          <groupId>javax.annotation</groupId>
-          <artifactId>javax.annotation-api</artifactId>
-        </dependency>
-      </dependencies>
-    </profile>
-
   </profiles>
 </project>
