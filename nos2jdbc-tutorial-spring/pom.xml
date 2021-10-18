@@ -11,7 +11,7 @@
     <maven.compiler.target>11</maven.compiler.target>
     <maven.compiler.source>11</maven.compiler.source>
 
-    <nos2jdbc.version>1.8.1</nos2jdbc.version>
+    <nos2jdbc.version>1.8.2</nos2jdbc.version>
 
     <entityPathPart>entity</entityPathPart>
   </properties>
@@ -89,15 +89,12 @@
         </dependencies>
         <configuration>
           <target>
-            <property name="plugin_classpath"
-              refid="maven.plugin.classpath" />
+            <property name="plugin_classpath" refid="maven.plugin.classpath" />
             <property name="runtime_classpath"
               refid="maven.runtime.classpath" />
-            <property name="test_classpath"
-              refid="maven.test.classpath" />
+            <property name="test_classpath" refid="maven.test.classpath" />
             <echo message="plugin classpath:  ${plugin_classpath}" />
-            <echo
-              message="runtime classpath:  ${runtime_classpath}" />
+            <echo message="runtime classpath:  ${runtime_classpath}" />
             <echo message="test classpath:  ${test_classpath}" />
             <ant antfile="${basedir}/nos2jdbc-gen-build.xml"
               target="${ant.target}" inheritRefs="true" />
