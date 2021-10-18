@@ -21,7 +21,7 @@
 
     <skip.unit.tests>true</skip.unit.tests>
 
-    <entityPathPart>gen/entity</entityPathPart>
+    <entityPathPart>entity</entityPathPart>
 
     <wf.hostname>localhost</wf.hostname>
     <wf.username>admin</wf.username>
