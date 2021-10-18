@@ -1,21 +1,5 @@
 <project name="nos2jdbc-tutorial-wildfly" default="gen-ddl" basedir=".">
-  <property name="classpathdir" value="target/classes"/>
-  <property name="rootpackagename" value="nos2jdbc.tutorial.wildfly"/>
-  <property name="subpackagename" value="gen"/>
-  <property name="entitypackagename" value="gen.entity"/>
-  <property name="namespackagename" value="gen.names"/>
-  <property name="servicepackagename" value="gen.service"/>
-  <property name="serviceclassnamesuffix" value="ServiceBase"/>
-  <property name="entityfilepattern" value="nos2jdbc/tutorial/wildfly/gen/entity/**/*.java"/>
-  <property name="javafiledestdir" value="src/main/java"/>
-  <property name="testjavafiledestdir" value="src/test/java"/>
-  <property name="javafileencoding" value="UTF-8"/>
-  <property name="version" value="latest"/>
-  <property name="sqlfilepattern" value="sql/**/*.sql"/>
-  <property name="applyenvtoversion" value="false"/>
-  <property name="env" value="ut"/>
-  <property name="jdbcmanagername" value="jdbcManager"/>
-  <property name="componenttype" value="cdi"/>
+  <property file="nos2jdbc-gen-build.properties"/>
 
   <path id="classpath">
     <pathelement location="forgen/resources"/>
