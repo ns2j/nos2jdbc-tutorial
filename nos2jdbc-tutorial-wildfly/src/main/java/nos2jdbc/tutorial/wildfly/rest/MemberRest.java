@@ -13,7 +13,7 @@ import javax.ws.rs.core.Response.ResponseBuilder;
 
 import java.util.List;
 
-import nos2jdbc.tutorial.wildfly.gen.entity.Member;
+import nos2jdbc.tutorial.wildfly.entity.Member;
 import nos2jdbc.tutorial.wildfly.service.ClubMemberRelService;
 import nos2jdbc.tutorial.wildfly.service.MemberService;
 

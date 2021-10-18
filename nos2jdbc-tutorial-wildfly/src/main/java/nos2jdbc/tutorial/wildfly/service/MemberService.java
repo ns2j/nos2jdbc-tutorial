@@ -2,7 +2,8 @@ package nos2jdbc.tutorial.wildfly.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import nos2jdbc.tutorial.wildfly.gen.entity.Member;
+
+import nos2jdbc.tutorial.wildfly.entity.Member;
 import nos2jdbc.tutorial.wildfly.gen.service.MemberServiceBase;
 
 import static nos2jdbc.tutorial.wildfly.gen.names.MemberNames.*;

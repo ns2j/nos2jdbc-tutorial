@@ -3,9 +3,9 @@ package nos2jdbc.tutorial.wildfly.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import nos2jdbc.tutorial.wildfly.gen.entity.Club;
-import nos2jdbc.tutorial.wildfly.gen.entity.ClubMemberRel;
-import nos2jdbc.tutorial.wildfly.gen.entity.Member;
+import nos2jdbc.tutorial.wildfly.entity.Club;
+import nos2jdbc.tutorial.wildfly.entity.ClubMemberRel;
+import nos2jdbc.tutorial.wildfly.entity.Member;
 import nos2jdbc.tutorial.wildfly.gen.service.ClubMemberRelServiceBase;
 
 import static nos2jdbc.tutorial.wildfly.gen.names.ClubMemberRelNames.*;

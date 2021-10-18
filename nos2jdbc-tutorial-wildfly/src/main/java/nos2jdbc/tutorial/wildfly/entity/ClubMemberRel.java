@@ -1,24 +1,15 @@
-package nos2jdbc.tutorial.wildfly.gen.entity;
+package nos2jdbc.tutorial.wildfly.entity;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class ClubMemberRel {
-    @Id
+public class ClubMemberRel extends EntityBase {
     public Long clubId;
-
-    @Id
-    public Long memberId;
-    
     @ManyToOne
     public Club club;
     
+    public Long memberId;
     @ManyToOne
     public Member member;
-    
-    
-    
-
 }

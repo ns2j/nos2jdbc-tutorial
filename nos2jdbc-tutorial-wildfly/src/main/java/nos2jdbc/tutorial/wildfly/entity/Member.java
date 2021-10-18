@@ -1,23 +1,16 @@
-package nos2jdbc.tutorial.wildfly.gen.entity;
+package nos2jdbc.tutorial.wildfly.entity;
 
 import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Member {
-    @Id
-    @GeneratedValue
-    public Long id;
-    
+public class Member extends EntityBase {
     @Column
     public String name;
     
     @OneToMany(mappedBy ="member")
     public List<ClubMemberRel> clubMemberRelList;
-
 }
