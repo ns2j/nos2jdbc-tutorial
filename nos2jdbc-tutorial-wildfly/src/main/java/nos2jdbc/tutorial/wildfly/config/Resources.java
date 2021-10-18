@@ -23,7 +23,7 @@ public class Resources {
     @Resource
     private TransactionSynchronizationRegistry syncRegistry;
 
-    @Resource(lookup = "java:/Ns2jTutorial")
+    @Resource(lookup = "java:/Ns2jDS")
     private DataSource dataSource;
 
     private DbmsDialect dialect = new PostgreDialect();
