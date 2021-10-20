@@ -10,12 +10,13 @@
       <property name="allowConnectingToRunningServer">true</property>
     </configuration>
   </container>
+
   <container qualifier="wildfly-remote" default="false">
     <configuration>
-      <property name="managementPort">9990</property>
-      <property name="managementAddress">localhost</property>
-      <property name="username">aadmin</property>
-      <property name="password">Admin#70365</property>
+      <property name="managementAddress">${hostname}</property>
+      <property name="managementPort">${port}</property>
+      <property name="username">${username}</property>
+      <property name="password">${password}</property>
     </configuration>
   </container>
 </arquillian>
