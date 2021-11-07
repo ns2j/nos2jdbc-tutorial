@@ -1,103 +1,91 @@
 package nos2jdbc.tutorial.spring;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
 import nos2jdbc.tutorial.spring.entity.Club;
 import nos2jdbc.tutorial.spring.entity.ClubMemberRel;
 import nos2jdbc.tutorial.spring.entity.Member;
+import nos2jdbc.tutorial.spring.entity.nonauto.MemberItem;
+import nos2jdbc.tutorial.spring.entity.nonauto.MemberKey;
+import nos2jdbc.tutorial.spring.entity.nonauto.MemberYm;
+import nos2jdbc.tutorial.spring.entity.nonauto.Ym;
+import nos2jdbc.tutorial.spring.entity.nonauto.YmItem;
+import nos2jdbc.tutorial.spring.entity.nonauto.rollup.Key;
 import nos2jdbc.tutorial.spring.service.ClubMemberRelService;
 import nos2jdbc.tutorial.spring.service.ClubService;
+import nos2jdbc.tutorial.spring.service.LunchFeeService;
 import nos2jdbc.tutorial.spring.service.MemberService;
 
 @Component
 public class MyApp {
     @Autowired
-    protected ClubService clubService;
+    ClubService clubService;
     @Autowired
-    protected MemberService memberService;
+    MemberService memberService;
     @Autowired
-    protected ClubMemberRelService relService;
-    
-    protected Club createClub(String name) {
-	Club club = new Club();
-	club.name = name;
-	return club;
-    }
-    protected List<Club> getClubList() {
-	List<Club> clubs = new ArrayList<>();
-	clubs.add(createClub("野球"));
-	clubs.add(createClub("サッカー"));
-	clubs.add(createClub("吹奏楽"));
-	return clubs;
-    }
-    
-    protected Member createMember(String name) {
-	Member member = new Member();
-	member.name = name;
-	return member;
-    }
-    protected List<Member> getMemberList() {
-	List<Member> members = new ArrayList<>();
-	members.add(createMember("太郎"));
-	members.add(createMember("花子"));
-	members.add(createMember("やぎ"));
-	members.add(createMember("ねこ"));
-	return members;
-    }
+    ClubMemberRelService relService;
+    @Autowired
+    LunchFeeService lfService;
 
-    protected ClubMemberRel createRel(int co, int mo) {
-	Club c = clubService.getByOrderer(co - 1);
-	Member m = memberService.getByOrder(mo - 1);
-	ClubMemberRel rel = new ClubMemberRel();
-	rel.clubId = c.id;
-	rel.memberId = m.id;
-	return rel;
-    }
-    protected List<ClubMemberRel> getRelList() {
-	List<ClubMemberRel> rels = new ArrayList<>();
-	rels.add(createRel(1, 1));
-	rels.add(createRel(1, 2));
-	rels.add(createRel(1, 3));
-	rels.add(createRel(2, 2));
-	rels.add(createRel(2, 3));
-	rels.add(createRel(3, 3));
-	return rels;
-    }
     
-    @Transactional
-    public void insertData() {
-	if (clubService.findAll().size() == 0)
-	    for (Club club: getClubList()) 
-		clubService.insert(club);
-	if (memberService.findAll().size() == 0)
-	    for (Member mem: getMemberList())
-		memberService.insert(mem);
-	if (relService.findAll().size() == 0)
-	    for (ClubMemberRel rel: getRelList())
-		relService.insert(rel);
-    }
-
     public void dump() {
-	for (Club club: clubService.findAllWithMembers()) {
-	    System.out.println("*" + club.name + "*");
-	    for (ClubMemberRel rel: club.clubMemberRelList) {
-		System.out.println(" " + rel.member.name);
-	    }
-	}
-	System.out.println("");
-	for (Member mem: memberService.findAllWithClubs()) {
-	    System.out.println("+" + mem.name + "+");
-	    for (ClubMemberRel rel: mem.clubMemberRelList) {
-		System.out.println(" " + rel.club.name);
-	    }
-	}
+        for (Club club: clubService.findAllWithMembers()) {
+            System.out.println(club.name);
+            for (ClubMemberRel rel: club.clubMemberRelList) {
+                System.out.println("--" + rel.member.name);
+            }
+        }
+        System.out.println("");
+        for (Member mem: memberService.findAllWithClubs()) {
+            System.out.println(mem.name);
+            for (ClubMemberRel rel: mem.clubMemberRelList) {
+                System.out.println("--" + rel.club.name);
+            }
+        }
     }
 
+    public void dumpSqlSelect() {
+        System.out.println("");
+        for (Ym ym: lfService.getYm()) {
+            printWithFormat("y: %d, m: %d", ym.y, ym.m);
+            for (YmItem i: ym.itemList) {
+                printWithFormat("    member: %s, payOn: %s, amount: %s", i.member.memberName, i.payOn, i.amount);
+            }
+        }
+        System.out.println("");
+        for (MemberKey mk: lfService.getMember()) {
+            printWithFormat("memberId: %d, memberNmae: %s", mk.memberId, mk.memberName);
+            for (MemberYm ym: mk.ymList) {
+                printWithFormat("    y: %d, m: %d", ym.y, ym.m);
+                for (MemberItem mi: ym.itemList) {
+                    printWithFormat("        lunchFeeId: %d, payOn: %s, amount: %s", mi.lunchFeeId, mi.payOn, mi.amount);
+                }
+            }
+        }
+    }
+    
+    public void dumpRollup() {
+        System.out.println("");
+        System.out.println("rollup example");
+        for (Key k: lfService.getRollup())
+            printWithFormat("(%s): (amount: %s, count: %d))", "" + k, k.item.amount, k.item.count);
+        System.out.println("");
+        System.out.println("rollup example2");
+        for (Key k: lfService.getRollup2())
+            printWithFormat("(%s): (amount: %s, count: %d))", "" + k, k.item.amount, k.item.count);
+        System.out.println("");
+        System.out.println("rollup example3");
+        for (Key k: lfService.getRollup3())
+            printWithFormat("(%s): (amount: %s, count: %d))", "" + k, k.item.amount, k.item.count);
+        System.out.println("");
+        System.out.println("cube example");
+        for (Key k: lfService.getCube())
+            printWithFormat("(%s): (amount: %s, count: %d))", "" + k, k.item.amount, k.item.count);
+    }
+
+    void printWithFormat(String format, Object...objs) {
+        System.out.println(String.format(format, objs));
+    }
 }

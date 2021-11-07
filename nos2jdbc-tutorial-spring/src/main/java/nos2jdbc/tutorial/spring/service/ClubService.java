@@ -21,7 +21,7 @@ public class ClubService extends ClubServiceBase {
 		.getResultList();
     }
     
-    public Club getByOrderer(int co) {
+    public Club getByOrder(int co) {
 	return select().orderBy(asc(id())).offset(co).limit(1).getSingleResult();
     }
 

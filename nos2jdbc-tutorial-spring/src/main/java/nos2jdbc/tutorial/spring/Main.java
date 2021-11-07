@@ -10,9 +10,15 @@ public class Main {
     public static void main(String[] args) {
 	ApplicationContext applicationContext = SpringApplication.run(Main.class, args);
         MyApp app = applicationContext.getBean(MyApp.class);
+        Data data = applicationContext.getBean(Data.class);
+        CubeDumper cd = applicationContext.getBean(CubeDumper.class);
+        data.insert();
         app.dump();
-        app.insertData();
-        app.dump();
+        app.dumpSqlSelect();
+        app.dumpRollup();
+        cd.loadKeys();
+        cd.dumCube();
+        cd.dumpCubeWithJoin();
     }
 
 }

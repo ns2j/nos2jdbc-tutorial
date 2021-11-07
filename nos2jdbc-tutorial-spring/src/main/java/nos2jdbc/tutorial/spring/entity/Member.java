@@ -14,4 +14,6 @@ public class Member extends EntityBase {
     @OneToMany(mappedBy ="member")
     public List<ClubMemberRel> clubMemberRelList;
 
+    @OneToMany(mappedBy = "member")
+    public List<LunchFee> lunchFeeList;
 }
