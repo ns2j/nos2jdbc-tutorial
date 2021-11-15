@@ -45,6 +45,6 @@ public class LunchFeeService extends LunchFeeServiceBase {
     }
     public List<Key> getCubeWithJoin() {
         sqlFilePathPrefix = "sql/";
-        return selectBySqlFile(Key.class, "cube-with-join.sql").getResultList();
+        return selectBySqlFile(Key.class, "cube_with_join.sql").getResultList();
     }
 }
