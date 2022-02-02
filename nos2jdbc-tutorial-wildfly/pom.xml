@@ -31,7 +31,7 @@
 
     <jdbc.groupId>org.postgresql</jdbc.groupId>
     <jdbc.artifactId>postgresql</jdbc.artifactId>
-    <jdbc.version>42.2.9</jdbc.version>
+    <jdbc.version>42.2.25</jdbc.version>
 
   </properties>
 
