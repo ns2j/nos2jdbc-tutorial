@@ -6,8 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
-import nos2jdbc.annotation.CreateAt;
-import nos2jdbc.annotation.UpdateAt;
+import nos2jdbc.annotation.CreatedAt;
+import nos2jdbc.annotation.UpdatedAt;
 
 @MappedSuperclass
 public class EntityBase {
@@ -15,9 +15,9 @@ public class EntityBase {
     @GeneratedValue
     public Long id;
     
-    @CreateAt
+    @CreatedAt
     public OffsetDateTime createAt;
-    @UpdateAt
+    @UpdatedAt
     public OffsetDateTime updateAt;
 
 
