@@ -133,6 +133,9 @@
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath"
     />
+    <copy-to-0000
+      classpathref="classpath"
+    />
     <gen-names
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
@@ -248,6 +251,15 @@
       entitypackagename="${entitypackagename}"
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
+      classpathref="classpath"
+    />
+    <copy-to-0000
+      classpathref="classpath"
+    />
+  </target>
+
+  <target name="copy-to-0000">
+    <copy-to-0000
       classpathref="classpath"
     />
   </target>
