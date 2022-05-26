@@ -97,7 +97,6 @@
     <gen-sqlfiletest
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
-      entitypackagename="${entitypackagename}"
       javafiledestdir="${testjavafiledestdir}"
       javafileencoding="${javafileencoding}"
       env="${env}"
