@@ -2,10 +2,9 @@ package nos2jdbc.tutorial.spring.entity.nonauto.rollup;
 
 import java.math.BigDecimal;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-import javax.persistence.Transient;
-
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Transient;
 import nos2jdbc.annotation.NoFk;
 import nos2jdbc.annotation.NonAuto;
 

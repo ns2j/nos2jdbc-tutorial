@@ -1,8 +1,7 @@
 package nos2jdbc.tutorial.spring.entity.nonauto;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToOne;
 import nos2jdbc.annotation.NoFk;
 import nos2jdbc.annotation.NonAuto;
 
