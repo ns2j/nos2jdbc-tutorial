@@ -3,10 +3,10 @@ package nos2jdbc.tutorial.kotlinspring.entity.nonauto
 import java.math.BigDecimal
 import java.time.LocalDate
 
-import javax.persistence.Entity
-import javax.persistence.Id
-import javax.persistence.ManyToOne
-import javax.persistence.Transient
+import jakarta.persistence.Entity
+import jakarta.persistence.Id
+import jakarta.persistence.ManyToOne
+import jakarta.persistence.Transient
 
 import nos2jdbc.annotation.NoFk
 import nos2jdbc.annotation.NonAuto

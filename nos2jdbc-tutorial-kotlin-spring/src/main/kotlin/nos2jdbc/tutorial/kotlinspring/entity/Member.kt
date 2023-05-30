@@ -1,10 +1,10 @@
 package nos2jdbc.tutorial.kotlinspring.entity
 
-import javax.persistence.Entity
-import javax.persistence.Id
-import javax.persistence.GeneratedValue
-import javax.persistence.Column
-import javax.persistence.OneToMany
+import jakarta.persistence.Entity
+import jakarta.persistence.Id
+import jakarta.persistence.GeneratedValue
+import jakarta.persistence.Column
+import jakarta.persistence.OneToMany
 @Entity
 class Member : EntityBase() {
     @Column

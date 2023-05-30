@@ -4,16 +4,16 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>nos2jdbc.tutorial</groupId>
   <artifactId>nos2jdbc-tutorial-kotlin-spring</artifactId>
-  <version>1.9.1</version>
+  <version>1.9.2</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <kotlin.version>1.6.21</kotlin.version>
+    <kotlin.version>1.8.20</kotlin.version>
     <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
 
-    <nos2jdbc.version>1.8.6</nos2jdbc.version>
+    <nos2jdbc.version>1.9.1-SNAPSHOT</nos2jdbc.version>
     <entityPathPart>nos2jdbc/tutorial/kotlinspring/entity</entityPathPart>
     <mainClass>nos2jdbc.tutorial.kotlinspring.MainKt</mainClass>
 
@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.7.0</version>
+    <version>3.1.0</version>
   </parent>
 
   <dependencies>
@@ -40,11 +40,12 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
     </dependency>
-
+<!--
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
     </dependency>
+-->
 
 
     <dependency>
@@ -53,22 +54,25 @@
       <version>${nos2jdbc.version}</version>
     </dependency>
     <dependency>
-      <groupId>javax.transaction</groupId>
-      <artifactId>javax.transaction-api</artifactId>
+      <groupId>jakarta.transaction</groupId>
+      <artifactId>jakarta.transaction-api</artifactId>
     </dependency>
     <dependency>
-      <groupId>javax.persistence</groupId>
-      <artifactId>persistence-api</artifactId>
-      <version>1.0.2</version>
+      <groupId>jakarta.persistence</groupId>
+      <artifactId>jakarta.persistence-api</artifactId>
     </dependency>
     <dependency>
-      <groupId>javax.annotation</groupId>
-      <artifactId>javax.annotation-api</artifactId>
+      <groupId>jakarta.annotation</groupId>
+      <artifactId>jakarta.annotation-api</artifactId>
     </dependency>
+<dependency>
+    <groupId>xerces</groupId>
+    <artifactId>xercesImpl</artifactId>
+    <version>2.12.2</version>
+</dependency>
     <dependency>
       <groupId>org.hsqldb</groupId>
       <artifactId>hsqldb</artifactId>
-      <version>2.6.1</version>
       <scope>runtime</scope>
     </dependency>
 

@@ -1,7 +1,7 @@
 package nos2jdbc.tutorial.kotlinspring.entity.nonauto.rollup
 
-import javax.persistence.Entity
-import javax.persistence.OneToOne
+import jakarta.persistence.Entity
+import jakarta.persistence.OneToOne
 
 import nos2jdbc.annotation.NonAuto
 
