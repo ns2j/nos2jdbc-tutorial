@@ -15,9 +15,9 @@ public class EntityBase {
     public Long id;
     
     @CreatedAt
-    public OffsetDateTime createAt;
+    public OffsetDateTime createdAt;
     @UpdatedAt
-    public OffsetDateTime updateAt;
+    public OffsetDateTime updatedAt;
 
 
 }
