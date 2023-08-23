@@ -13,7 +13,7 @@
     <kotlin.version>1.8.20</kotlin.version>
     <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
 
-    <nos2jdbc.version>1.9.1-SNAPSHOT</nos2jdbc.version>
+    <nos2jdbc.version>1.9.3</nos2jdbc.version>
     <entityPathPart>nos2jdbc/tutorial/kotlinspring/entity</entityPathPart>
     <mainClass>nos2jdbc.tutorial.kotlinspring.MainKt</mainClass>
 
