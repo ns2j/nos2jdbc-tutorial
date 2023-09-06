@@ -1,10 +1,8 @@
 package nos2jdbc.tutorial.wildfly.service;
 
-import static nos2jdbc.tutorial.wildfly.gen.names.ClubNames.name;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.seasar.extension.jdbc.operation.Operations.eq;
-
-import javax.inject.Inject;
+import static nos2jdbc.tutorial.wildfly.gen.names.ClubNames.*;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.seasar.extension.jdbc.operation.Operations.*;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit5.ArquillianExtension;
@@ -14,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.seasar.extension.jdbc.JdbcManager;
 
+import jakarta.inject.Inject;
 import nos2jdbc.tutorial.wildfly.ArchiveTestUtil;
 import nos2jdbc.tutorial.wildfly.entity.Club;
 /**

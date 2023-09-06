@@ -2,10 +2,9 @@ package nos2jdbc.tutorial.wildfly.entity;
 
 import java.time.OffsetDateTime;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
 import nos2jdbc.annotation.CreatedAt;
 import nos2jdbc.annotation.UpdatedAt;
 

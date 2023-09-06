@@ -1,13 +1,7 @@
 package nos2jdbc.tutorial.wildfly.config;
 import java.sql.SQLException;
 
-import javax.annotation.Resource;
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.context.Dependent;
-import javax.enterprise.inject.Produces;
 import javax.sql.DataSource;
-import javax.transaction.TransactionManager;
-import javax.transaction.TransactionSynchronizationRegistry;
 
 import org.seasar.extension.jdbc.DbmsDialect;
 import org.seasar.extension.jdbc.JdbcManager;
@@ -15,6 +9,12 @@ import org.seasar.extension.jdbc.dialect.PostgreDialect;
 import org.seasar.extension.jdbc.manager.JdbcManagerImpl;
 import org.seasar.extension.jdbc.manager.JdbcManagerImplementor;
 
+import jakarta.annotation.Resource;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.Dependent;
+import jakarta.enterprise.inject.Produces;
+import jakarta.transaction.TransactionManager;
+import jakarta.transaction.TransactionSynchronizationRegistry;
 import nos2jdbc.ManagerSetter;
 import nos2jdbc.TransactionManagerRegistry;
 

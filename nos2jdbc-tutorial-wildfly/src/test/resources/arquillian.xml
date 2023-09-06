@@ -13,10 +13,12 @@
 
   <container qualifier="wildfly-remote" default="false">
     <configuration>
+      <property name="host">${hostname}</property>
+      <property name="port">8080</property>
       <property name="managementAddress">${hostname}</property>
       <property name="managementPort">${port}</property>
       <property name="username">${username}</property>
-      <property name="password">${password}</property>
+      <property name="password">${password}</property> 
     </configuration>
   </container>
 </arquillian>

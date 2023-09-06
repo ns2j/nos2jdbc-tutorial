@@ -1,14 +1,27 @@
-<project name="nos2jdbc-tutorial-wildfly" default="gen-ddl" basedir=".">
+<project name="nos2jdbc-tutorial-spring" default="gen-ddl" basedir=".">
   <property file="nos2jdbc-gen-build.properties"/>
-
+  <condition property="additional_classpath" value="${runtime_classpath}">
+    <isfalse value="${testdb}"/>
+    <!--
+      <not>
+        <equals arg1="${testdb}" arg2="true"/>
+      </not>
+  -->
+  </condition>
+  <condition property="additional_classpath" value="${test_classpath}">
+    <istrue value="${testdb}"/>
+    <!--
+        <equals arg1="${testdb}" arg2="true"/>
+  -->
+  </condition>
   <path id="classpath">
     <pathelement location="forgen/resources"/>
     <fileset dir="forgen/lib">
       <exclude name="forgen/lib/sources/**"/>
     </fileset>
-    <pathelement location="${classpathdir}"/>
     <pathelement path="${plugin_classpath}"/>
-    <pathelement path="${compile_classpath}"/>
+    <pathelement path="${additional_classpath}"/>
+    <pathelement location="${classpathdir}"/>
   </path>
 
   <taskdef resource="s2jdbc-gen-task.properties" classpathref="classpath"/>
@@ -109,14 +122,17 @@
       </sqlfileset>
     </gen-sqlfiletest>
   </target>
-
   <target name="gen-ddl">
     <gen-ddl
       classpathdir="${classpathdir}"
       rootpackagename="${rootpackagename}"
       entitypackagename="${entitypackagename}"
       env="${env}"
+      dump="${dump}"
       jdbcmanagername="${jdbcmanagername}"
+      classpathref="classpath"
+    />
+    <copy-to-0000
       classpathref="classpath"
     />
     <gen-names
@@ -209,6 +225,7 @@
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
       classpathref="classpath"
+      testdb="${testdb}"
     />
   </target>
 
@@ -233,6 +250,15 @@
       entitypackagename="${entitypackagename}"
       env="${env}"
       jdbcmanagername="${jdbcmanagername}"
+      classpathref="classpath"
+    />
+    <copy-to-0000
+      classpathref="classpath"
+    />
+  </target>
+
+  <target name="copy-to-0000">
+    <copy-to-0000
       classpathref="classpath"
     />
   </target>

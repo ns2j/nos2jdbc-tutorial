@@ -1,19 +1,15 @@
 package nos2jdbc.tutorial.wildfly.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import nos2jdbc.tutorial.wildfly.entity.Club;
-import nos2jdbc.tutorial.wildfly.entity.ClubMemberRel;
-import nos2jdbc.tutorial.wildfly.entity.Member;
-import nos2jdbc.tutorial.wildfly.gen.service.ClubServiceBase;
-
 import static nos2jdbc.tutorial.wildfly.gen.names.ClubNames.*;
 import static org.seasar.extension.jdbc.operation.Operations.*;
 
-import javax.enterprise.context.Dependent;
-import javax.inject.Inject;
-import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.enterprise.context.Dependent;
+import jakarta.transaction.Transactional;
+import nos2jdbc.tutorial.wildfly.entity.Club;
+import nos2jdbc.tutorial.wildfly.gen.service.ClubServiceBase;
 
 @Dependent
 @Transactional
