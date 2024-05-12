@@ -13,7 +13,7 @@
     <maven.compiler.target>11</maven.compiler.target>
     <maven.compiler.source>11</maven.compiler.source>
 
-    <nos2jdbc.version>1.9.3</nos2jdbc.version>
+    <nos2jdbc.version>1.9.4</nos2jdbc.version>
 
     <entityPathPart>entity</entityPathPart>
   </properties>
