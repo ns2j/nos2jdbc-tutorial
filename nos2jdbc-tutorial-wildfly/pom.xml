@@ -30,7 +30,7 @@
 
     <jdbc.groupId>org.postgresql</jdbc.groupId>
     <jdbc.artifactId>postgresql</jdbc.artifactId>
-    <jdbc.version>42.3.3</jdbc.version>
+    <jdbc.version>42.3.8</jdbc.version>
 
   </properties>
 
