@@ -4,16 +4,16 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>nos2jdbc.tutorial</groupId>
   <artifactId>nos2jdbc-tutorial-kotlin-spring</artifactId>
-  <version>1.9.3</version>
+  <version>1.9.4</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <kotlin.version>1.8.20</kotlin.version>
-    <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
+    <kotlin.compiler.incremental>false</kotlin.compiler.incremental>
 
-    <nos2jdbc.version>1.9.4</nos2jdbc.version>
+    <nos2jdbc.version>1.9.8-SNAPSHOT</nos2jdbc.version>
     <entityPathPart>nos2jdbc/tutorial/kotlinspring/entity</entityPathPart>
     <mainClass>nos2jdbc.tutorial.kotlinspring.MainKt</mainClass>
 
@@ -65,11 +65,17 @@
       <groupId>jakarta.annotation</groupId>
       <artifactId>jakarta.annotation-api</artifactId>
     </dependency>
+<!--
 <dependency>
     <groupId>xerces</groupId>
     <artifactId>xercesImpl</artifactId>
     <version>2.12.2</version>
 </dependency>
+-->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+    </dependency>
     <dependency>
       <groupId>org.hsqldb</groupId>
       <artifactId>hsqldb</artifactId>
