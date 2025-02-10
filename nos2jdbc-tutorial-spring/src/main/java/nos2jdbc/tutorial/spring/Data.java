@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import nos2jdbc.tutorial.spring.entity.Club;
 import nos2jdbc.tutorial.spring.service.ClubService;
 
 @Component
@@ -29,5 +30,16 @@ public class Data {
 
         DataSource dataSource = jdbcManager.getDataSource();
         new SqlWriter(dataSource).write(dataSet);
+
+        upsert();
+    }
+    @Transactional
+    public void upsert() {
+        Club c = clubService.findById(1L);
+        c.name = "硬式野球部";
+        clubService.upsert(c);
+        c.id = null;
+        c.name = "美術部";
+        clubService.upsert(c);
     }
 }
