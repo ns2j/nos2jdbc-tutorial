@@ -5,6 +5,7 @@ import java.time.OffsetDateTime
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.Id
 import jakarta.persistence.MappedSuperclass
+import jakarta.persistence.Version
 
 import nos2jdbc.annotation.CreatedAt
 import nos2jdbc.annotation.UpdatedAt
@@ -15,10 +16,13 @@ open class EntityBase {
     @GeneratedValue
     var id: Long? = null
     
+    @Version
+    var version: Long? = 1
+
     @CreatedAt
-    var createAt: OffsetDateTime? = null 
+    var createdAt: OffsetDateTime? = null 
     @UpdatedAt
-    var updateAt: OffsetDateTime? = null
+    var updatedAt: OffsetDateTime? = null
 
 
 }
