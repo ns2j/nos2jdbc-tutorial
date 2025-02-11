@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>nos2jdbc.tutorial</groupId>
   <artifactId>nos2jdbc-tutorial-spring</artifactId>
-  <version>1.9.8</version>
+  <version>1.9.9</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -13,7 +13,7 @@
     <maven.compiler.target>17</maven.compiler.target>
     <maven.compiler.source>17</maven.compiler.source>
 
-    <nos2jdbc.version>1.9.8</nos2jdbc.version>
+    <nos2jdbc.version>1.9.9</nos2jdbc.version>
 
     <entityPathPart>entity</entityPathPart>
   </properties>
