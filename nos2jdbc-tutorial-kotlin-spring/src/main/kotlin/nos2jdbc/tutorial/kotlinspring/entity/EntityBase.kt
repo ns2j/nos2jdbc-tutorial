@@ -17,7 +17,7 @@ open class EntityBase {
     var id: Long? = null
     
     @Version
-    var version: Long? = 1
+    var version: Int = 1
 
     @CreatedAt
     var createdAt: OffsetDateTime? = null 
