@@ -19,8 +19,7 @@ public class YmItem {
     public YmItemMember member;
     public LocalDate payOn;
     public BigDecimal amount;
-    public int count;
     
-    @Transient @ManyToOne @NoFk
+    @Transient
     public Ym ym;
  }
