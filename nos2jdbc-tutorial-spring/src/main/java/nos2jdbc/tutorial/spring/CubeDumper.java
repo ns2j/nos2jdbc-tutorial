@@ -14,14 +14,14 @@ import nos2jdbc.tutorial.spring.service.MemberService;
 
 @Component
 public class CubeDumper {
-    @Autowired
     MemberService memberService;
-    @Autowired
     LunchFeeService lfService;
 
     List<Key> keys;
 
-    public CubeDumper() {
+    public CubeDumper(MemberService memberService, LunchFeeService lfService) {
+        this.memberService = memberService;
+        this.lfService = lfService;
     }
 
     public void loadKeys() {

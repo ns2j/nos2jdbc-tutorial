@@ -29,6 +29,13 @@ public class MyApp {
     @Autowired
     LunchFeeService lfService;
 
+    public MyApp(ClubService clubService, MemberService memberService,
+            ClubMemberRelService relService, LunchFeeService lfService) {
+        this.clubService = clubService;
+        this.memberService = memberService;
+        this.relService = relService;
+        this.lfService = lfService;
+    }
     
     public void dump() {
         for (Club club: clubService.findAllWithMembers()) {
@@ -56,7 +63,7 @@ public class MyApp {
         }
         System.out.println("");
         for (MemberKey mk: lfService.getMember()) {
-            printWithFormat("memberId: %d, memberNmae: %s", mk.memberId, mk.memberName);
+            printWithFormat("memberId: %d, memberName: %s", mk.memberId, mk.memberName);
             for (MemberYm ym: mk.ymList) {
                 printWithFormat("    y: %d, m: %d", ym.y, ym.m);
                 for (MemberItem mi: ym.itemList) {

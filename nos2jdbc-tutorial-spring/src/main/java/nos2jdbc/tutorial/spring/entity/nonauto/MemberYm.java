@@ -12,6 +12,8 @@ import nos2jdbc.annotation.NonAuto;
 @Entity @NonAuto
 public class MemberYm {
     @Id
+    public Long ymMemberId;
+    @Id
     public Integer y;
     @Id
     public Integer m;

@@ -15,36 +15,34 @@ import nos2jdbc.tutorial.spring.gen.service.LunchFeeServiceBase;
 @Service
 @Transactional
 public class LunchFeeService extends LunchFeeServiceBase {
-    @Autowired
+
     JdbcManager jdbcManager;
     
-    public List<Ym> getYm() {
+    public LunchFeeService(JdbcManager jdbcManager) {
+        this.jdbcManager = jdbcManager;
         sqlFilePathPrefix = "sql/";
+    }
+    
+    public List<Ym> getYm() {
         return selectBySqlFile(Ym.class, "sum.sql").getResultList();
     }
     public List<MemberKey> getMember() {
-        sqlFilePathPrefix = "sql/";
         return selectBySqlFile(MemberKey.class, "sum.sql").getResultList();
     }
 
     public List<Key> getRollup() {
-        sqlFilePathPrefix = "sql/";
         return selectBySqlFile(Key.class, "rollup.sql").getResultList();
     }
     public List<Key> getRollup2() {
-        sqlFilePathPrefix = "sql/";
         return selectBySqlFile(Key.class, "rollup2.sql").getResultList();
     }
     public List<Key> getRollup3() {
-        sqlFilePathPrefix = "sql/";
         return selectBySqlFile(Key.class, "rollup3.sql").getResultList();
     }
     public List<Key> getCube() {
-        sqlFilePathPrefix = "sql/";
         return selectBySqlFile(Key.class, "cube.sql").getResultList();
     }
     public List<Key> getCubeWithJoin() {
-        sqlFilePathPrefix = "sql/";
         return selectBySqlFile(Key.class, "cube_with_join.sql").getResultList();
     }
 }
