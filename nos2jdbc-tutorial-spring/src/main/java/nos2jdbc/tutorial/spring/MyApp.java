@@ -77,19 +77,19 @@ public class MyApp {
         System.out.println("");
         System.out.println("rollup example");
         for (Key k: lfService.getRollup())
-            printWithFormat("(%s): (amount: %s, count: %d))", "" + k, k.item.amount, k.item.count);
+            printWithFormat("(%s): (amount: %s, count: %d)", "" + k, k.item.amount, k.item.count);
         System.out.println("");
         System.out.println("rollup example2");
         for (Key k: lfService.getRollup2())
-            printWithFormat("(%s): (amount: %s, count: %d))", "" + k, k.item.amount, k.item.count);
+            printWithFormat("(%s): (amount: %s, count: %d)", "" + k, k.item.amount, k.item.count);
         System.out.println("");
         System.out.println("rollup example3");
         for (Key k: lfService.getRollup3())
-            printWithFormat("(%s): (amount: %s, count: %d))", "" + k, k.item.amount, k.item.count);
+            printWithFormat("(%s): (amount: %s, count: %d)", "" + k, k.item.amount, k.item.count);
         System.out.println("");
         System.out.println("cube example");
         for (Key k: lfService.getCube())
-            printWithFormat("(%s): (amount: %s, count: %d))", "" + k, k.item.amount, k.item.count);
+            printWithFormat("(%s): (amount: %s, count: %d)", "" + k, k.item.amount, k.item.count);
     }
 
     void printWithFormat(String format, Object...objs) {
